@@ -22,4 +22,17 @@
         cabin.setAttribute('title', 'Click to pause or play');
         cabin.addEventListener('click', function () { if (cv.paused) cv.play(); else cv.pause(); });
     }
+    // Theme toggle: remembers the choice; otherwise follows the system setting.
+    var root = document.documentElement, btn = document.querySelector('.theme-toggle');
+    function sync() {
+        var dark = root.getAttribute('data-theme') === 'dark';
+        if (btn) { btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme'); btn.setAttribute('aria-pressed', dark ? 'true' : 'false'); }
+    }
+    if (btn) btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        sync();
+    });
+    sync();
 })();
