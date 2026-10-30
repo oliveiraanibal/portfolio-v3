@@ -7,7 +7,7 @@
         document.querySelectorAll('.feature').forEach(function (row) {
             var v = row.querySelector('video');
             if (!v) return;
-            function on() { v.currentTime = 0; v.classList.add('on'); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+            function on() { v.currentTime = 0; v.playbackRate = 0.75; v.classList.add('on'); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
             function off() { v.pause(); v.classList.remove('on'); }
             row.addEventListener('mouseenter', on); row.addEventListener('mouseleave', off);
             row.addEventListener('focusin', on); row.addEventListener('focusout', off);
