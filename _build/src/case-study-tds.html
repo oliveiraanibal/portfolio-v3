@@ -1,0 +1,70 @@
+<!--
+title: Tridonic Design System
+description: Design system lead at Tridonic: one shared, versioned system replacing 200+ one-off components across 15+ IoT and lighting apps.
+image: imgs/tds-complex.jpg
+kind: Project note
+-->
+<header class="c-head grid">
+  <h1>Tridonic Design System</h1>
+  <p class="lede">Replacing more than 200 one-off components across 15 apps with one shared, versioned design system that kept shipping after I left.</p>
+</header>
+
+<dl class="c-facts">
+  <div><dt>Company</dt><dd>Tridonic, Zumtobel Group</dd></div>
+  <div><dt>When</dt><dd>2019–2022</dd></div>
+  <div><dt>My role</dt><dd>Design system lead: product and UX</dd></div>
+  <div><dt>Users</dt><dd>Designers and developers</dd></div>
+  <div><dt>Product</dt><dd>Figma library, tokens, React components, docs</dd></div>
+</dl>
+
+<section class="short" aria-label="In short">
+  <h2>In short</h2>
+  <div><h3>The problem</h3><p>An audit found 200+ unique UI components across 15+ apps. Designers spent about 20% of their time on consistency fixes, and specs differed by team.</p></div>
+  <div><h3>What I did</h3><p>Ran the system as an internal product: vision, roadmap and buy-in from business and engineering, component research and design, and adoption across teams.</p></div>
+  <div><h3>The outcome</h3><p class="res">40% less development time</p><p>90% fewer inconsistencies, and the library was still releasing in 2025, at version 8.9.5.</p></div>
+</section>
+
+<figure class="hero">
+  <div class="frame"><video controls muted autoplay loop playsinline preload="metadata" poster="imgs/tds1.png"><source src="imgs/tds3.mp4" type="video/mp4"></video></div>
+  <figcaption><b>The documentation site of the coded library.</b> Release notes, components and the energy chart. About one minute, no sound.</figcaption>
+</figure>
+
+<chapter id="decisions" title="Key decisions" sub="A product with its own users">
+  <article class="decision">
+    <h3>One source of truth, from Figma to code</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Colour, type and spacing live as tokens generated from the Figma library into a React package on Tridonic's private registry, and every component page links back to Figma.</p></div>
+      <div><h4>Trade-off</h4><p>A token pipeline takes longer to set up than a shared Figma file, but it's the only way a change reaches every product without a manual hand-off.</p></div>
+    </div>
+    <div class="two figs">
+      <figure><div class="shot"><img src="imgs/tds-component.jpg" alt="Component page with properties and source code" loading="lazy"></div><figcaption><b>Component page.</b> Change a property, see the code.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/tds-notes.jpg" alt="Getting started notes" loading="lazy"></div><figcaption><b>Release notes.</b> Breaking changes stated up front.</figcaption></figure>
+    </div>
+  </article>
+  <article class="decision">
+    <h3>Build the parts only this domain needs</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Generic buttons are easy to find anywhere. Lighting and IoT teams needed a GPS input for installations, a time picker with time zones, an energy chart and a canvas editor for floor plans.</p></div>
+      <div><h4>Trade-off</h4><p>More to maintain than a thin generic kit. They were also the components teams couldn't build quickly alone: the reason to use the system rather than start again.</p></div>
+    </div>
+    <div class="three figs">
+      <figure><div class="shot"><img src="imgs/tds-inputgps.jpg" alt="InputGPS component" loading="lazy"></div><figcaption><b>InputGPS.</b> Coordinates in any format.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/tds-complex.jpg" alt="Wheel picker with time zone" loading="lazy"></div><figcaption><b>Time picker.</b> With time zone.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/tds-chart.jpg" alt="Energy consumption chart" loading="lazy"></div><figcaption><b>Charts.</b> Energy consumption.</figcaption></figure>
+    </div>
+  </article>
+  <figure>
+    <div class="shot"><img src="imgs/tds-misc.png" alt="TDS v1.1 documentation collage" loading="lazy"></div>
+    <figcaption><b>Where it started: TDS v1.1, January 2021.</b> Guidelines, layout, colour, best practices, and inclusive design based on Microsoft's Persona Spectrum. Four years later it was a coded library at v8.9.5.</figcaption>
+  </figure>
+</chapter>
+
+<chapter id="outcome" title="Outcome">
+  <ul class="outcomes">
+    <li><span class="n">40%</span><span class="w">less development time</span><span class="b">On interfaces built with the library.</span></li>
+    <li><span class="n">90%</span><span class="w">fewer design inconsistencies</span><span class="b">Against the original audit.</span></li>
+    <li><span class="n">25–35%</span><span class="w">faster development of <a href="case-study-lichtmonitor.html">lichtMONITOR</a></span><span class="b">Built on the system.</span></li>
+  </ul>
+  <p class="note">Figures as reported internally at Tridonic, plus 25% faster onboarding for new designers and developers.</p>
+  <p class="reflect-one"><b>Reflection.</b> A design system is a product with users. Versions, release notes and a Figma link on every component kept teams on it more than any mandate would have.</p>
+</chapter>

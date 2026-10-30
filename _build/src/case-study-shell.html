@@ -1,0 +1,124 @@
+<!--
+title: Shell Mobility offers
+description: Lead product designer of the internal tool that lets Shell's markets create loyalty offers, manage partners and approve changes without weeks of manual work.
+image: imgs/shell-dashboard.jpg
+kind: Case study
+-->
+<header class="c-head grid">
+  <h1>Shell Mobility offers</h1>
+  <p class="lede">A self-service tool for Shell's loyalty offers and partners, replacing 8 to 12 weeks of manual steps and paper sign-offs.</p>
+</header>
+
+<dl class="c-facts">
+  <div><dt>Client</dt><dd>Shell Mobility</dd></div>
+  <div><dt>Built by</dt><dd>DEUS.AI</dd></div>
+  <div><dt>When</dt><dd>2023</dd></div>
+  <div><dt>My role</dt><dd>Lead product designer</dd></div>
+  <div><dt>Users</dt><dd>Market offer teams, approvers, admins, partners</dd></div>
+</dl>
+
+<section class="short" aria-label="In short">
+  <h2>In short</h2>
+  <div><h3>The problem</h3><p>A new loyalty offer took 8 to 12 weeks: manual steps, physical sign-offs and legacy systems that surfaced errors late. Partners waited months to be set up.</p></div>
+  <div><h3>What I did</h3><p>Led the design of the tool on top of a new microservices platform: research with offer teams and approvers, a service blueprint, prototypes, and the offers, partners and permissions interface.</p></div>
+  <div><h3>The outcome</h3><p class="res">Partner onboarding from 100 days to 10 minutes</p><p>Reward creation from 2 days to 15 minutes, and 9× fewer errors in offer assignments.</p></div>
+</section>
+
+<figure class="hero">
+  <div class="frame"><video controls muted autoplay loop playsinline preload="metadata" poster="imgs/shell-dashboard.jpg"><source src="imgs/shell-hero.mp4" type="video/mp4"></video></div>
+  <figcaption><b>The prototype, end to end.</b> Sign in, the market dashboard, a new offer, partners and roles. Placeholder content, no sound.</figcaption>
+</figure>
+
+<chapter id="context" title="Context and my role">
+  <p>Shell runs loyalty offers in many markets, often with partner brands: fuel discounts, rewards, games. In 2023 Shell asked DEUS.AI to replace the manual processes, legacy systems and siloed teams behind them.</p>
+  <div class="split">
+    <div><h3>My part</h3><ul>
+      <li>Research: stakeholder interviews, task analysis and shadowing.</li>
+      <li>Scenarios, flows and a service blueprint for log-in and offer creation.</li>
+      <li>Interactive prototypes, validated with stakeholders.</li>
+      <li>The interface for offers, partners, users and roles.</li>
+    </ul></div>
+    <div><h3>The team's part</h3><ul>
+      <li>Engineering designed and built the microservices platform: API gateway, gRPC services, CI/CD.</li>
+      <li>Product and Shell stakeholders set priorities and approved each release.</li>
+    </ul></div>
+  </div>
+</chapter>
+
+<chapter id="problem" title="The problem" sub="8 to 12 weeks per offer">
+  <ul>
+    <li>Manual, error-prone steps to create offers and onboard partners.</li>
+    <li>Physical sign-offs before an offer could move on.</li>
+    <li>Several legacy systems that didn't share data, so errors appeared late and far from their cause.</li>
+    <li>No shared view of offers and partners across departments.</li>
+  </ul>
+  <p>Markets couldn't react to competitors or seasons, and partners waited months to be set up.</p>
+</chapter>
+
+<chapter id="learned" title="What I learned" sub="Where the weeks went">
+  <ul class="learn">
+    <li><span class="f">Offers sat for weeks waiting for signatures on paper.</span><span class="r">approval moved into the tool, with an Approver role.</span></li>
+    <li><span class="f">Each market runs its own offers.</span><span class="r">the dashboard is scoped to one market, with a default that opens at login.</span></li>
+    <li><span class="f">Many offers repeat with small changes.</span><span class="r">templates: load one to start, save any offer as one.</span></li>
+    <li><span class="f">Errors appeared only after offers reached the loyalty systems.</span><span class="r">validation before submit, and a Failed status that says which system rejected it.</span></li>
+    <li><span class="f">Partners depended on Shell staff for every change.</span><span class="r">partners get their own sign-in to request access and keep their details current.</span></li>
+  </ul>
+  <figure>
+    <a class="shot" href="imgs/shell-cj.png"><img src="imgs/shell-cj.png" alt="Service blueprint for log in and create offer, with two error points" loading="lazy"></a>
+    <figcaption><b>Service blueprint: log in and create an offer.</b> User steps on top; screens and system calls below. The two red points (sign-in and COCO validation) are where it fails, and the design answers both.</figcaption>
+  </figure>
+</chapter>
+
+<chapter id="decisions" title="Decisions" sub="Guardrails for a regulated business">
+  <article class="decision">
+    <h3>Open on the work that needs attention</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Three counters (drafts, ready to assign, failed) sit on top of the market dashboard, and each is a filter. The first thing an offer manager sees is their own queue.</p></div>
+      <div><h4>Trade-off</h4><p>Cross-market views take an extra step. Teams rarely needed them, and the default market can be changed with a star.</p></div>
+    </div>
+    <figure><div class="shot"><img src="imgs/shell-dashboard.jpg" alt="Great Britain market dashboard with Draft, Ready to assign and Failed counters" loading="lazy"></div><figcaption><b>Market dashboard.</b> Status counters as entry points.</figcaption></figure>
+  </article>
+  <article class="decision">
+    <h3>A form that grows with the offer type</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Offer types need very different data. The form starts small and adds only the tabs a type needs. Submit stays disabled, with a line saying why, until every mandatory field is valid.</p></div>
+      <div><h4>Trade-off</h4><p>Complex offers still mean eight tabs. Tabs beat a wizard here: experienced users jump between sections as they edit.</p></div>
+    </div>
+    <div class="three figs">
+      <figure><div class="shot"><img src="imgs/shell-offer-new.jpg" alt="New offer form with two tabs" loading="lazy"></div><figcaption><b>Start.</b> Two tabs; Submit explains itself.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/shell-offer.jpg" alt="Offer form with all tabs" loading="lazy"></div><figcaption><b>Type chosen.</b> Only the tabs it needs.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/shell-content.jpg" alt="Content tab with languages and preview" loading="lazy"></div><figcaption><b>Content.</b> Per language, previewed live.</figcaption></figure>
+    </div>
+  </article>
+  <article class="decision">
+    <h3>Permissions instead of signatures</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Paper sign-offs became four roles per service: administrator, manager, collaborator and approver. Failure is explained where it happens, and changes that ripple into other systems say so first.</p></div>
+      <div><h4>Trade-off</h4><p>A dense permission matrix, shown only to administrators. Making every permission visible was the price of removing paper.</p></div>
+    </div>
+    <div class="three figs">
+      <figure><div class="shot"><img src="imgs/shell-roles.jpg" alt="Roles and permissions matrix" loading="lazy"></div><figcaption><b>Roles.</b> Only approvers and admins approve.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/shell-status.jpg" alt="About offer status dialog" loading="lazy"></div><figcaption><b>Statuses.</b> Failed names the systems and the fix.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/shell-login.jpg" alt="Sign-in for external and internal users" loading="lazy"></div><figcaption><b>Two doors.</b> Partners and Shell staff.</figcaption></figure>
+    </div>
+  </article>
+</chapter>
+
+<chapter id="outcome" title="Outcome">
+  <ul class="outcomes">
+    <li><span class="n">100 days → 10 min</span><span class="w">to onboard a partner</span><span class="b">Partner self-service and in-tool setup.</span></li>
+    <li><span class="n">2 days → 15 min</span><span class="w">to create a reward</span><span class="b">Templates and a form that asks only what's needed.</span></li>
+    <li><span class="n">9× fewer</span><span class="w">errors in offer assignments</span><span class="b">Validation before submit.</span></li>
+    <li><span class="n">3× faster</span><span class="w">time to market</span><span class="b">Process and platform together.</span></li>
+    <li><span class="n">8× faster</span><span class="w">development</span><span class="b">The engineering platform.</span></li>
+    <li><span class="n">Half</span><span class="w">the cloud cost</span><span class="b">The engineering platform.</span></li>
+  </ul>
+  <p class="note">Figures as reported by the project. The first three are where the tool's design did the work.</p>
+</chapter>
+
+<chapter id="reflection" title="Reflection">
+  <div class="reflect">
+    <div><h3>What worked</h3><p>Designing permissions with the people who sign, not just for them. Paper could only go once the roles matched how responsibility was already divided.</p></div>
+    <div><h3>What I'd do differently</h3><p>Track offer creation end to end. We reported partner onboarding and reward creation, but not the 8–12 week figure we started from, which is the number a business owner remembers.</p></div>
+  </div>
+</chapter>

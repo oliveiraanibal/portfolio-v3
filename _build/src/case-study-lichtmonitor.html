@@ -1,0 +1,122 @@
+<!--
+title: lichtMONITOR
+description: Lead product designer of Tridonic's web app for commissioning and monitoring smart lighting from a floor plan.
+image: imgs/lm1.png
+kind: Case study
+-->
+<header class="c-head grid">
+  <h1>lichtMONITOR</h1>
+  <p class="lede">Commissioning and monitoring smart lighting from a floor plan, instead of from a list of device addresses.</p>
+</header>
+
+<dl class="c-facts">
+  <div><dt>Company</dt><dd>Tridonic, Zumtobel Group</dd></div>
+  <div><dt>When</dt><dd>2022</dd></div>
+  <div><dt>My role</dt><dd>Lead product designer</dd></div>
+  <div><dt>Users</dt><dd>Installers on site, facility managers remotely</dd></div>
+  <div><dt>Product</dt><dd>B2B IoT web app, codename easyGO</dd></div>
+</dl>
+
+<section class="short" aria-label="In short">
+  <h2>In short</h2>
+  <div><h3>The problem</h3><p>Buildings have thousands of luminaires and sensors, listed by address, not by place. Setup was matching addresses by hand, and faults were found by walking the building.</p></div>
+  <div><h3>What I did</h3><p>Led the product design: on-site research, the commissioning workflow, the information architecture, and an interface built around the building's floor plan.</p></div>
+  <div><h3>The outcome</h3><p class="res">30% less time on manual checks</p><p>15–25% lower lighting maintenance costs, and 25–35% faster development by building on the design system.</p></div>
+</section>
+
+<figure class="hero">
+  <div class="frame"><video controls muted autoplay loop playsinline preload="metadata" poster="imgs/lm1.png"><source src="imgs/lm3.mp4" type="video/mp4"></video></div>
+  <figcaption><b>From an empty plan to a monitored building.</b> Upload the floor plan, place and group devices, locate one, and follow errors floor by floor. Two minutes, no sound.</figcaption>
+</figure>
+
+<chapter id="context" title="Context and my role">
+  <p>Tridonic makes the drivers, sensors and controllers inside lighting installations. In 2022 it started easyGO, later lichtMONITOR, to turn installations into a source of data for running buildings. A server at the edge collects data from DALI-2 drivers and sensors and sends it to the cloud. The first requirement was a graphical overview of the site: the "GO" in easyGO.</p>
+  <div class="split">
+    <div><h3>My part</h3><ul>
+      <li>Research: interviews, contextual inquiry on site, usability tests.</li>
+      <li>The commissioning workflow and the information architecture.</li>
+      <li>Wireframes, prototypes and high-fidelity screens.</li>
+      <li>Screens built on the <a href="case-study-tds.html">Tridonic Design System</a>, which I also led.</li>
+    </ul></div>
+    <div><h3>The team's part</h3><ul>
+      <li>The product owner set scope and priorities.</li>
+      <li>Engineers built the edge server, the controllers' integration and the cloud platform.</li>
+    </ul></div>
+  </div>
+</chapter>
+
+<chapter id="problem" title="The problem" sub="Lighting you can't see">
+  <p>Matching addresses to physical fittings was slow, and once an installation was running, nobody had one view of its health. Maintenance was reactive: a lamp failed, someone complained, someone walked the floor.</p>
+  <p>Two kinds of people do this work in two places. Installers commission devices on site, on a mobile device. Facility managers prepare, group and monitor from a computer, remotely.</p>
+  <figure>
+    <a class="shot pad" href="imgs/lm-flowchart.png"><img src="imgs/lm-flowchart.png" alt="Commissioning workflow in five lanes alternating between site and office" loading="lazy"></a>
+    <figcaption><b>The commissioning workflow.</b> Provisioning on site, preparation remotely, localisation on site, grouping and scenes remotely. The product had to carry work across those hand-overs.</figcaption>
+  </figure>
+</chapter>
+
+<chapter id="learned" title="What I learned" sub="People think in rooms, not addresses">
+  <ul class="learn">
+    <li><span class="f">Devices are known by address, but people think in floors and rooms.</span><span class="r">everything happens on the floor plan.</span></li>
+    <li><span class="f">On site, most time went into finding which fitting is which.</span><span class="r">"Locate on press" makes the real device identify itself.</span></li>
+    <li><span class="f">Raw device data didn't tell anyone what to do.</span><span class="r">errors and alerts are counted in the top bar, per floor and in an incident list that links to the plan.</span></li>
+    <li><span class="f">Setup moves between site and office several times.</span><span class="r">one shared plan that autosaves, so work is waiting wherever it continues.</span></li>
+  </ul>
+  <div class="two figs">
+    <figure><div class="shot"><img src="imgs/lm-persona.png" alt="Proto-persona Alex, facility manager" loading="lazy"></div><figcaption><b>Proto-persona.</b> Alex, a facility manager; the photo is illustrative.</figcaption></figure>
+    <figure><div class="shot"><img src="imgs/lm-ia2.png" alt="Affinity mapping on a glass wall" loading="lazy"></div><figcaption><b>Affinity mapping.</b> Features and content grouped, the start of the sitemap.</figcaption></figure>
+  </div>
+</chapter>
+
+<chapter id="decisions" title="Decisions" sub="The floor plan is the interface">
+  <article class="decision">
+    <h3>Start from the building</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>A new installation starts with a plan, not a device list. The architect's drawing is uploaded, then faded and desaturated into a quiet background so devices stand out.</p></div>
+      <div><h4>Trade-off</h4><p>One more setup step before anything is useful. Without it, every later step goes back to addresses.</p></div>
+    </div>
+    <div class="three figs">
+      <figure><div class="shot"><img src="imgs/lm-empty.jpg" alt="Empty state" loading="lazy"></div><figcaption><b>Empty state.</b> Two ways in.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/lm-floor-raw.jpg" alt="Floor plan at full opacity" loading="lazy"></div><figcaption><b>Uploaded.</b> Too busy to work on.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/lm-floor-faded.jpg" alt="Faded floor plan" loading="lazy"></div><figcaption><b>Faded.</b> A quiet background.</figcaption></figure>
+    </div>
+  </article>
+  <article class="decision">
+    <h3>Place, group, then find by pressing</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Devices are placed as typed placeholders, then matched to what a controller finds. Groups get a name and a colour, so a room reads as a room. "Locate on press" makes luminaires blink, sensors beep and blinds roll down.</p></div>
+      <div><h4>Trade-off</h4><p>An extra matching step once controllers are connected. In return, the plan can be prepared remotely before anyone is on site.</p></div>
+    </div>
+    <div class="three figs">
+      <figure><div class="shot"><img src="imgs/lm-devices.jpg" alt="Device type menu" loading="lazy"></div><figcaption><b>Placeholders.</b> Eleven device types.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/lm-groups.jpg" alt="Coloured room groups" loading="lazy"></div><figcaption><b>Groups.</b> Colour and name per room.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/lm-locate.jpg" alt="Locate on press instructions" loading="lazy"></div><figcaption><b>Locate on press.</b> The real device responds.</figcaption></figure>
+    </div>
+  </article>
+  <article class="decision">
+    <h3>Show faults where they are</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>The top bar always shows connected controllers, the last sync, errors and alerts. Floors carry error badges, and every incident links back to its place on the plan.</p></div>
+      <div><h4>Trade-off</h4><p>Persistent counters take space on every screen. For maintenance, knowing that something is wrong matters more than a clean header.</p></div>
+    </div>
+    <div class="two figs">
+      <figure><div class="shot"><img src="imgs/lm-floors.jpg" alt="Floors with error badges" loading="lazy"></div><figcaption><b>On the plan.</b> Five errors on the ground floor.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/lm-dashboard.jpg" alt="Incident dashboard" loading="lazy"></div><figcaption><b>Dashboard.</b> Incidents first, linked to the plan.</figcaption></figure>
+    </div>
+  </article>
+</chapter>
+
+<chapter id="outcome" title="Outcome">
+  <ul class="outcomes">
+    <li><span class="n">30%</span><span class="w">less time on manual checks and troubleshooting</span><span class="b">Faults found on the plan, not on foot.</span></li>
+    <li><span class="n">15–25%</span><span class="w">lower lighting maintenance costs</span><span class="b">From reactive to planned maintenance.</span></li>
+    <li><span class="n">25–35%</span><span class="w">faster development</span><span class="b">Built on the Tridonic Design System.</span></li>
+  </ul>
+  <p class="note">Product-level figures as reported for installations using the system, plus 10–15% extra energy savings, which come mostly from lighting control.</p>
+</chapter>
+
+<chapter id="reflection" title="Reflection">
+  <div class="reflect">
+    <div><h3>What worked</h3><p>Putting data where people already think. Moving from addresses to rooms and floors did more for usability than any chart.</p></div>
+    <div><h3>What I'd do differently</h3><p>Treat the installer's on-site, mobile work as its own product sooner, instead of a smaller version of the desk view. The ladder and the desk ask for different interfaces.</p></div>
+  </div>
+</chapter>

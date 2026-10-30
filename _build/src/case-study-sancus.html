@@ -1,0 +1,62 @@
+<!--
+title: Sancus AI
+description: Associate product manager and lead designer on Sancus, DEUS.AI's product for asking questions of company documents and getting answers with their sources.
+image: imgs/sancus1.jpg
+kind: Project note
+-->
+<header class="c-head grid">
+  <h1>Sancus AI</h1>
+  <p class="lede">Ask your company's documents a question, and get an answer with the sources to check it.</p>
+</header>
+
+<dl class="c-facts">
+  <div><dt>Company</dt><dd>DEUS.AI, own product</dd></div>
+  <div><dt>When</dt><dd>2023–2024</dd></div>
+  <div><dt>My role</dt><dd>Associate PM and lead designer</dd></div>
+  <div><dt>Scope</dt><dd>Discovery to MVP</dd></div>
+  <div><dt>Product</dt><dd>B2B SaaS, retrieval-augmented answers</dd></div>
+</dl>
+
+<section class="short" aria-label="In short">
+  <h2>In short</h2>
+  <div><h3>The problem</h3><p>Company knowledge is spread over documents nobody searches well, and early AI chat answered without sources, so nobody could use it for a decision.</p></div>
+  <div><h3>What I did</h3><p>Aligned stakeholders on vision and roadmap, managed the backlog, ran discovery (jobs to be done, competitors, target journey) and led the UX and UI of the MVP.</p></div>
+  <div><h3>The outcome</h3><p class="res">92.3% of answers rated relevant</p><p>In MVP benchmarks. Sancus then became the LLM method inside <a href="case-study-kb.html">KB RetroTool</a>.</p></div>
+</section>
+
+<figure class="hero">
+  <div class="frame"><video controls muted autoplay loop playsinline preload="metadata" poster="imgs/sancus1.jpg"><source src="imgs/sancus3.mp4" type="video/mp4"></video></div>
+  <figcaption><b>The MVP, end to end.</b> First-run guide, curating documents, choosing which to chat with, and an answer with sources. One minute, no sound.</figcaption>
+</figure>
+
+<chapter id="decisions" title="Key decisions" sub="Compete on answers people can check">
+  <p>Competitors led with many data connectors; few helped people trust and curate what went in. So the MVP took only PDF, DOCX and TXT uploads, moved Confluence and SharePoint connectors to the beta, and put the effort into answer quality and curation.</p>
+  <article class="decision">
+    <h3>Make every answer checkable</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Answers carry numbered citations. "Why this answer" opens the source pages with the passage highlighted, next to Summarise, Regenerate and feedback.</p></div>
+      <div><h4>Trade-off</h4><p>Longer answers and a busier chat. An unchecked answer can't go into a report, so verification won.</p></div>
+    </div>
+    <figure><div class="shot"><img src="imgs/sancus-sources.jpg" alt="Answer with citations and the Why this answer panel" loading="lazy"></div><figcaption><b>Why this answer.</b> Sources with page numbers; the passage used is highlighted.</figcaption></figure>
+  </article>
+  <article class="decision">
+    <h3>Make curation part of the product</h3>
+    <div class="why">
+      <div><h4>Why</h4><p>Answers are only as good as the documents. Upload suggests a title and asks for a description, saying why; outdated files can be marked obsolete; each chat uses a chosen set of documents.</p></div>
+      <div><h4>Trade-off</h4><p>An extra step at upload. It's skippable, and the nudge stays on the document so it isn't forgotten.</p></div>
+    </div>
+    <div class="two figs">
+      <figure><div class="shot"><img src="imgs/sancus-upload.jpg" alt="Upload dialog with accuracy warning" loading="lazy"></div><figcaption><b>Upload.</b> Title suggested, description requested.</figcaption></figure>
+      <figure><div class="shot"><img src="imgs/sancus-curate.jpg" alt="Document picker with obsolete toggle" loading="lazy"></div><figcaption><b>Curation.</b> Choose documents; hide obsolete ones.</figcaption></figure>
+    </div>
+  </article>
+</chapter>
+
+<chapter id="outcome" title="Outcome">
+  <ul class="outcomes">
+    <li><span class="n">92.3%</span><span class="w">of generated answers rated relevant</span><span class="b">MVP benchmark tests.</span></li>
+    <li><span class="n">0.38 s</span><span class="w">to retrieve from 100 files</span><span class="b">Per query, in the benchmark.</span></li>
+    <li><span class="n">25%</span><span class="w">less time to integrate into a client process</span><span class="b">As reported for the MVP.</span></li>
+  </ul>
+  <p class="reflect-one"><b>Reflection.</b> Data quality shows up in the interface. Curation needed as much design attention as the chat itself.</p>
+</chapter>
